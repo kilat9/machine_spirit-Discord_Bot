@@ -8,10 +8,10 @@ import json
 
 # importing sys
 import sys
-  
+
 # adding Folder_2 to the system path
 sys.path.insert(0, '\config\config.py')
-  
+
 # importing the add and odd_even 
 # function
 from config.config import BotToken
@@ -115,7 +115,7 @@ async def play(ctx,*,song):
                 if (song == 'sting'):
                         source = FFmpegPCMAudio('sting.mp3')
                         player = voice.play(source)
-                
+
                 if (song == '17pdr' or song == 'firefly'):
                         source = FFmpegPCMAudio('17pdr.mp3')
                         player = voice.play(source)
@@ -133,11 +133,11 @@ async def play(ctx,*,song):
                 if (song == '125'):
                         source = FFmpegPCMAudio('125.mp3')
                         player = voice.play(source)
-                
+
                 if (song == 'school song' or song == 'School Song'):
                         source = FFmpegPCMAudio('school song.mp3')
                         player = voice.play(source)
-                
+
 
                  #---------------Songs----------------------------------#
 
@@ -148,7 +148,7 @@ async def play(ctx,*,song):
                 if (song == 'Fateful Night' or song == 'fateful night'):
                         source = FFmpegPCMAudio('Fateful Night.mp3')
                         player = voice.play(source)
-                
+
                 if (song == 'angry'):
                         source = FFmpegPCMAudio('angry.mp3')
                         player = voice.play(source)
@@ -160,7 +160,7 @@ async def play(ctx,*,song):
                 if (song == 'Tragedy' or song == 'tragedy'):
                         source = FFmpegPCMAudio('Tragedy.mp3')
                         player = voice.play(source)
-                
+
                 if (song == 'Hope' or song == 'hope'):
                         source = FFmpegPCMAudio('hope.mp3')
                         player = voice.play(source)
@@ -169,7 +169,7 @@ async def play(ctx,*,song):
                         source = FFmpegPCMAudio('legacy.mp3')
                         player = voice.play(source)
 
-                
+
                 while voice.is_playing(): #Checks if voice is playing
                         await asyncio.sleep(1) #While it's playing it sleeps for 1 second
                 else:
