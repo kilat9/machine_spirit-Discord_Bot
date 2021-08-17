@@ -127,6 +127,10 @@ async def play(ctx,*,song):
                 if (song == 'Chemistry' or song == 'chemistry'):
                         source = FFmpegPCMAudio('chemistry.mp3')
                         player = voice.play(source)
+                
+                if (song == 'Cicada' or song == 'cicada'):
+                        source = FFmpegPCMAudio('cicada.mp3')
+                        player = voice.play(source)
 
                 #---------------VI----------------------------------#
 
