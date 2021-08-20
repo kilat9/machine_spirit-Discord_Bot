@@ -132,6 +132,11 @@ async def play(ctx,*,song):
                         source = FFmpegPCMAudio('cicada.mp3')
                         player = voice.play(source)
 
+                if (song == 'angry'):
+                        source = FFmpegPCMAudio('angry.mp3')
+                        player = voice.play(source)
+
+
                 #---------------VI----------------------------------#
 
                 if (song == '125'):
@@ -151,10 +156,6 @@ async def play(ctx,*,song):
 
                 if (song == 'Fateful Night' or song == 'fateful night'):
                         source = FFmpegPCMAudio('Fateful Night.mp3')
-                        player = voice.play(source)
-
-                if (song == 'angry'):
-                        source = FFmpegPCMAudio('angry.mp3')
                         player = voice.play(source)
 
                 if (song == 'Another Voice' or song == 'another voice'):
