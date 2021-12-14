@@ -4,10 +4,7 @@ import asyncio
 from discord.ext import commands
 from discord import FFmpegPCMAudio
 from asyncio import sleep
-import json
 import http.client
-
-conn = http.client.HTTPSConnection("mashape-community-foaas.p.rapidapi.com")
 
 # importing sys
 import sys
@@ -232,29 +229,10 @@ async def song(ctx):
         myEmbed.add_field(name = f'+legacy', value="Violet Evergarden's Legacy from Violet Evergarden Movie OST", inline=False)
 
         await ctx.send(embed=myEmbed)
-
-
-@client.command(pass_context = True)
-async def test(ctx,*,Name):
-        headers = {
-        'x-rapidapi-host': "mashape-community-foaas.p.rapidapi.com",
-        'x-rapidapi-key': "a9ae2c0b78mshd8d0f26a1039f9ep14f46cjsnbeffc8020fe4",
-        'accept': "text/plain",
-
-        }
-
-        conn.request("GET", f'/thanks/{Name}', headers=headers)
-
-        res = conn.getresponse()
-        data = res.read()
-
-        await ctx.send(data.decode("utf-8"))
-       
+  
 
 
 import os
-
-
 
 path = "C:\Songs"
 all_mp3 = [os.path.join(path, f) for f in os.listdir(path) if f.endswith('.mp3')]
@@ -299,45 +277,5 @@ async def stuff(ctx):
 
         await checkSong()
 
-
-# path2 = "C:\\test"
-# all_mp32 = [os.path.join(path2, f) for f in os.listdir(path2) if f.endswith('.mp3')]
-# randomfile2 = random.choice(all_mp32)
-
-# @client.command(pass_context = True)
-# async def test2(ctx):
-        
-#         async def randomSong():
-#                 randomfile2 = random.choice(all_mp32)
-
-#                 source = FFmpegPCMAudio(randomfile2)
-#                 player = voice.play(source)
-
-#         async def embed():
-#                 myEmbed = discord.Embed(title ="NOW PLAYING :" ,color=0xD72C2C)
-#                 myEmbed.add_field(name = f'{randomfile2[9:-4]}',value = "." ,inline=False)
-#                 await ctx.send(embed=myEmbed)
-                
-        
-#         if (ctx.author.voice):
-#                 channel = ctx.message.author.voice.channel
-#                 voice = await channel.connect()
-
-
-#                 await randomSong()
-#                 await embed()
-#                 print(randomfile2)
-
-#         async def checkSong():
-
-#                 while voice.is_playing(): #Checks if voice is playing
-#                         await asyncio.sleep(1) #While it's playing it sleeps for 1 second
-#                 else:
-#                                 await randomSong()
-#                                 print("End song")
-#                                 await checkSong()
-#                                 # await voice.disconnect() #if not it disconnects
-
-#         await checkSong()
 
 client.run(BotToken)
