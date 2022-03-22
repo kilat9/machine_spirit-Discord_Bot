@@ -136,6 +136,23 @@ async def play(ctx,*,song):
                         source = FFmpegPCMAudio('angry.mp3')
                         player = voice.play(source)
 
+                if (song == 'study' or song == 'terlambat'):
+                        source = FFmpegPCMAudio('study.mp3')
+                        player = voice.play(source)
+
+                if (song == 'diam' ):
+                        source = FFmpegPCMAudio('diam.mp3')
+                        player = voice.play(source)
+
+                if (song == 'semangat'):
+                        source = FFmpegPCMAudio('semangat.mp3')
+                        player = voice.play(source)
+
+                 if (song == 'nipah'):
+                        source = FFmpegPCMAudio('nipah.mp3')
+                        player = voice.play(source)
+
+
 
                 #---------------VI----------------------------------#
 
@@ -222,6 +239,10 @@ async def song(ctx):
         myEmbed.add_field(name = f'+tikus', value="GUYS TIKUS GUYS", inline=False)
         myEmbed.add_field(name = f'+angry', value="Angry Chinese man meme aka CAO NI MA \n", inline=False)
         myEmbed.add_field(name = f'+chemistry', value="Paan reciting Chemistry textbook", inline=False)
+        myEmbed.add_field(name = f'+diam', value="DIAM LA B!@#H", inline=False)
+        myEmbed.add_field(name = f'+study', value="Awal sem dulu taknak study", inline=False)
+        myEmbed.add_field(name = f'+semangat', value="Jangan patah semangat", inline=False)
+        myEmbed.add_field(name = f'+nipah', value="Rika Nipah", inline=False)
 
         myEmbed.add_field(name = f'+VI+', value="---------------------------", inline=False)
         myEmbed.add_field(name = f'+125', value="VI Centenary song", inline=False)
