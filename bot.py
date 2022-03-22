@@ -173,6 +173,14 @@ async def play(ctx,*,song):
                 if (song == 'Legacy' or song == 'legacy'):
                         source = FFmpegPCMAudio('legacy.mp3')
                         player = voice.play(source)
+                
+                if (song == 'oorai' or song == 'Oorai'):
+                        source = FFmpegPCMAudio('oorai.mp3')
+                        player = voice.play(source)
+
+                if (song == 'golden hour' or song == 'golden'):
+                        source = FFmpegPCMAudio('goldenHour.mp3')
+                        player = voice.play(source)
 
 
                 while voice.is_playing(): #Checks if voice is playing
@@ -227,6 +235,9 @@ async def song(ctx):
         myEmbed.add_field(name = f'+hail', value="Hail Leidenschaftlich! from Violet Evergarden Movie OST", inline=False)
         myEmbed.add_field(name = f'+hope', value="A Young Boy's Hope from Violet Evergarden Movie OST", inline=False)
         myEmbed.add_field(name = f'+legacy', value="Violet Evergarden's Legacy from Violet Evergarden Movie OST", inline=False)
+        myEmbed.add_field(name = f'+oorai', value="Girls und Panzer Daikon War OVA song", inline=False)
+        myEmbed.add_field(name = f'+golden hour', value="Golden Hour – Vlad Gluschenko (No Copyright Music)", inline=False)
+
 
         await ctx.send(embed=myEmbed)
   
@@ -248,6 +259,7 @@ async def stuff(ctx):
                 player = voice.play(source)
                 myEmbed = discord.Embed(title ="NOW PLAYING :" ,color=0xD72C2C)
                 myEmbed.add_field(name = f'{randomfile[9:-4]}',value = "." ,inline=False)
+                print(randomfile)
                 await ctx.send(embed=myEmbed)
 
         # async def embed():
@@ -263,7 +275,6 @@ async def stuff(ctx):
 
                 await randomSong()
                 # await embed()
-                print(randomfile)
 
         async def checkSong():
 
