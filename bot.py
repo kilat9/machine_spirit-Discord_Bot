@@ -148,7 +148,7 @@ async def play(ctx,*,song):
                         source = FFmpegPCMAudio('semangat.mp3')
                         player = voice.play(source)
 
-                 if (song == 'nipah'):
+                if (song == 'nipah'):
                         source = FFmpegPCMAudio('nipah.mp3')
                         player = voice.play(source)
 
@@ -197,6 +197,10 @@ async def play(ctx,*,song):
 
                 if (song == 'golden hour' or song == 'golden'):
                         source = FFmpegPCMAudio('goldenHour.mp3')
+                        player = voice.play(source)
+                
+                if (song == 'Hikatanoi' or song == 'hikatanoi'):
+                        source = FFmpegPCMAudio('Hikatanoi.mp3')
                         player = voice.play(source)
 
 
