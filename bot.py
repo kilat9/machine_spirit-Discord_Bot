@@ -6,6 +6,12 @@ from discord import FFmpegPCMAudio
 from asyncio import sleep
 import http.client
 
+#Steps if reinstall
+# 1. Reinstall Python
+# 2. Install FFMPeg
+# 3. Install pynacl
+# 4. Create Config.py
+
 # importing sys
 import sys
 
@@ -148,7 +154,7 @@ async def play(ctx,*,song):
                         source = FFmpegPCMAudio('semangat.mp3')
                         player = voice.play(source)
 
-                 if (song == 'nipah'):
+                if (song == 'nipah'):
                         source = FFmpegPCMAudio('nipah.mp3')
                         player = voice.play(source)
 
