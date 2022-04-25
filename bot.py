@@ -204,6 +204,10 @@ async def play(ctx,*,song):
                 if (song == 'golden hour' or song == 'golden'):
                         source = FFmpegPCMAudio('goldenHour.mp3')
                         player = voice.play(source)
+                
+                if (song == 'Hikatanoi' or song == 'hikatanoi'):
+                        source = FFmpegPCMAudio('Hikatanoi.mp3')
+                        player = voice.play(source)
 
 
                 while voice.is_playing(): #Checks if voice is playing
