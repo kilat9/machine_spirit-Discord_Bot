@@ -281,7 +281,15 @@ all_mp3 = [os.path.join(path, f) for f in os.listdir(path) if f.endswith('.mp3')
 randomfile = random.choice(all_mp3)
 
 @client.command(pass_context = True)
-async def stuff(ctx):
+async def playlist(ctx,*,playlist):
+        if (playlist == 'stuff' or playlist == 'Stuff'):
+                path = "C:\\Songs"
+                cutout = 9
+        elif(playlist == 'nightcore' or playlist == 'Nightcore'):
+                path = "C:\\Nightcore"
+                cutout = 13
+
+        all_mp3 = [os.path.join(path, f) for f in os.listdir(path) if f.endswith('.mp3')]
         
         async def randomSong():
                 randomfile = random.choice(all_mp3)
@@ -289,7 +297,7 @@ async def stuff(ctx):
                 source = FFmpegPCMAudio(randomfile)
                 player = voice.play(source)
                 myEmbed = discord.Embed(title ="NOW PLAYING :" ,color=0xD72C2C)
-                myEmbed.add_field(name = f'{randomfile[9:-4]}',value = "." ,inline=False)
+                myEmbed.add_field(name = f'{randomfile[cutout:-4]}',value = "." ,inline=False)
                 print(randomfile)
                 await ctx.send(embed=myEmbed)
 
