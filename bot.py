@@ -205,9 +205,19 @@ async def play(ctx,*,song):
                         source = FFmpegPCMAudio('goldenHour.mp3')
                         player = voice.play(source)
                 
-                if (song == 'Hikatanoi' or song == 'hikatanoi'):
+                if (song == 'Hikanatoi' or song == 'hikanatoi'):
                         source = FFmpegPCMAudio('Hikatanoi.mp3')
                         player = voice.play(source)
+                
+                if (song == 'dark age' or song == 'Dark age'):
+                        source = FFmpegPCMAudio('dark age latin.mp3')
+                        player = voice.play(source)
+
+                if (song == 'summer time' or song == 'Summer Time'):
+                        source = FFmpegPCMAudio('summerRender.mp3')
+                        player = voice.play(source)
+                
+                
 
 
                 while voice.is_playing(): #Checks if voice is playing
@@ -268,6 +278,9 @@ async def song(ctx):
         myEmbed.add_field(name = f'+legacy', value="Violet Evergarden's Legacy from Violet Evergarden Movie OST", inline=False)
         myEmbed.add_field(name = f'+oorai', value="Girls und Panzer Daikon War OVA song", inline=False)
         myEmbed.add_field(name = f'+golden hour', value="Golden Hour – Vlad Gluschenko (No Copyright Music)", inline=False)
+        myEmbed.add_field(name = f'+hikanatoi', value="Hikanatoi Epic Byzantine music", inline=False)
+        myEmbed.add_field(name = f'+dark age', value="Dark age latin cover", inline=False)
+        myEmbed.add_field(name = f'+summer time', value="Summertime Render Opening Orchestra", inline=False)
 
 
         await ctx.send(embed=myEmbed)
